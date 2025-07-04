@@ -1,0 +1,117 @@
+{
+    "initialMetrics": {
+        "money": 30,
+        "people": 30,
+        "animals": 30,
+        "plants": 30,
+        "nature": 30
+    },
+    "dynamicDisasterDefinitions": {
+        "money_level10": "재정 위기: 국가 재정이 부족합니다.",
+        "money_level5": "국제 사회 지원 중단: 신용이 하락하여 국제 사회의 도움을 받을 수 없습니다!",
+        "people_level10": "민심 하락: 소규모 시위가 확산됩니다.",
+        "people_level5": "사회 혼란: 폭동이 일어납니다!",
+        "animals_level10": "멸종 위기 - 동물: 멸종 위기 상태에 놓인 동물이 많아집니다.",
+        "animals_level5": "심각한 멸종 위기 - 동물: 거의 모든 동물의 개체 수가 급감합니다!",
+        "plants_level10": "멸종 위기 - 식물: 멸종 위기 상태에 놓인 식물이 많아집니다.",
+        "plants_level5": "심각한 멸종 위기 - 식물: 거의 모든 식물의 개체 수가 급감합니다!",
+        "nature_level10": "기후 변화: 이상 기후 현상이 나타납니다.",
+        "nature_level5": "기후 변화 가속: 이상 기후 현상에 따른 피해가 심각합니다!"
+    },
+    "events": {
+        "disasters": {
+            "산불": {
+                "description": "대규모 산불이 발생했습니다. 숲과 마을이 불타고 있습니다.",
+                "choices": [
+                    {
+                        "text": "주택과 도로를 우선적으로 복구한다.",
+                        "effects": {"people": 5, "money": -5, "animals": -2, "plants": -2, "nature": -5}
+                    },
+                    {
+                        "text": "야생동물을 먼저 구조한다.",
+                        "effects": {"animals": 5, "money": -3, "people": -3, "plants": 0, "nature": 2}
+                    },
+                    {
+                        "text": "식물 복원에 집중한다.",
+                        "effects": {"plants": 5, "money": -3, "people": -3, "animals": 0, "nature": 2}
+                    },
+                    {
+                        "text": "생태계의 자정 능력을 믿고 최소한으로만 개입한다.",
+                        "effects": {"nature": 3, "money": 5, "people": -5, "animals": -2, "plants": -2}
+                    }
+                ]
+            },
+            "홍수": {
+                "description": "기록적인 폭우로 대규모 홍수가 발생했습니다. 강물이 범람하여 피해가 심각합니다.",
+                "choices": [
+                    {
+                        "text": "제방 건설을 최우선 과제로 둔다.",
+                        "effects": {"people": 5, "money": -5, "nature": -3}
+                    },
+                    {
+                        "text": "홍수 피해 지역 주민들을 대피시킨다.",
+                        "effects": {"people": -1, "money": -2, "nature": 1}
+                    },
+                    {
+                        "text": "홍수 방지 숲 조성에 힘쓴다.",
+                        "effects": {"plants": 5, "money": -4, "people": -1, "nature": 2}
+                    }
+                ]
+            },
+            "가뭄": {
+                "description": "장기간의 가뭄으로 농작물 피해와 식수 부족 문제가 심각합니다.",
+                "choices": [
+                    {
+                        "text": "인공 저수지를 건설하여 물을 확보한다.",
+                        "effects": {"people": 3, "money": -5, "nature": -3}
+                    },
+                    {
+                        "text": "관개시설을 제한하고 물 배급제를 실시한다.",
+                        "effects": {"money": 3, "people": -3, "nature": 3, "plants": -2}
+                    }
+                ]
+            }
+        },
+        "dilemmas": {
+            "기술 발전 vs 환경 보전": {
+                "description": "새로운 기술 발전 프로젝트가 제안되었습니다. 큰 이익을 얻을 수 있을 것으로 예상되나, 환경이 파괴될 수 있다는 우려가 나오고 있습니다.",
+                "choices": [
+                    {
+                        "text": "기술 발전을 추진한다.",
+                        "effects": {"people": 5, "nature": -5, "money": -2}
+                    },
+                    {
+                        "text": "자연 보전을 우선시한다.",
+                        "effects": {"nature": 3, "people": -1, "money": 3}
+                    }
+                ]
+            },
+            "야생동물 보호 vs 농업 생산": {
+                "description": "확장되는 야생동물 보호 구역이 인근 농업 생산량에 영향을 미치고 있습니다. 농부들이 농업에 대한 보호를 주장합니다.",
+                "choices": [
+                    {
+                        "text": "야생동물 보호 구역을 축소시키고 농업 생산량을 늘린다.",
+                        "effects": {"people": 2, "plants": 3, "animals": -5, "nature": -3}
+                    },
+                    {
+                        "text": "야생동물 보호 구역을 유지한다.",
+                        "effects": {"animals": 3, "people": -2, "plants": -1, "nature": 2}
+                    }
+                ]
+            },
+            "문화재 보존 vs 개발 이익": {
+                "description": "오래된 유적지가 발견된 지역에 대규모 개발 프로젝트가 예정되어 있습니다. 문화재를 보존해야 한다는 주장이 제기되고 있습니다.",
+                "choices": [
+                    {
+                        "text": "개발 프로젝트를 강행한다.",
+                        "effects": {"money": 5, "people": 3, "nature": -2}
+                    },
+                    {
+                        "text": "문화재 보존 및 관광 산업의 개발을 추진한다.",
+                        "effects": {"people": 1, "nature": 2, "money": -3}
+                    }
+                ]
+            }
+        }
+    }
+}

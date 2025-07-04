@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EDS</h1>
+        <div class="metrics-grid">
+            <div class="metric-item">돈<span id="money"></span></div>
+            <div class="metric-item">사람<span id="people"></span></div>
+            <div class="metric-item">동물<span id="animals"></span></div>
+            <div class="metric-item">식물<span id="plants"></span></div>
+            <div class="metric-item">자연<span id="nature"></span></div>
+        </div>
+
+        <div class="game-controls">
+            <button id="nextRoundButton">라운드 진행</button>
+        </div>
+
+        <div id="eventSection" class="event-section" style="display: none;">
+            <p id="eventDescription" class="event-description"></p>
+            <div id="choiceButtons" class="choice-buttons">
+            </div>
+        </div>
+
+        <div id="activeDisasterDisplay" class="active-disasters" style="display: none;">
+            <p>활성화된 동적 재난 카드:</p>
+            <ul id="activeDisasterList"></ul>
+        </div>
+
+        <div id="gameLog">
+            <p>Data Loading...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
